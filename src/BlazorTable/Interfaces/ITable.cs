@@ -46,7 +46,7 @@ namespace BlazorTable
         void LastPage();
 
         /// <summary>
-        /// Redraws the Table using EditorTemplate instead of Template
+        /// Redraws the Table using EditTemplate instead of Template
         /// </summary>
         void ToggleEditMode();
 
@@ -54,6 +54,21 @@ namespace BlazorTable
         /// List of All Available Columns
         /// </summary>
         List<IColumn<TableItem>> Columns { get; }
+
+        /// <summary>
+        /// Table Element CSS
+        /// </summary>
+        string TableClass { get; set; }
+
+        /// <summary>
+        /// Table Body CSS
+        /// </summary>
+        string TableBodyClass { get; set; }
+
+        /// <summary>
+        /// Table Head CSS
+        /// </summary>
+        string TableHeadClass { get; set; }
 
         /// <summary>
         /// Adds a Column to the Table

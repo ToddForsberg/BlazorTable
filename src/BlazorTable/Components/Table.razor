@@ -43,10 +43,10 @@
                         <tr>
                             @foreach (IColumn<TableItem> column in Columns)
                             {
-                                <td>
-                                    @if (IsEditMode && column.EditorTemplate != null)
+                                <td style="@(column.Align == Align.Left ? "text-align: left;" : column.Align == Align.Center ? "text-align: center;" : column.Align == Align.Right ? "text-align: right;" : string.Empty)">
+                                    @if (IsEditMode && column.EditTemplate != null)
                                     {
-                                        @column.EditorTemplate(item)
+                                        @column.EditTemplate(item)
                                     }
                                     else
                                     {
